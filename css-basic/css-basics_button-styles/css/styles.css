@@ -45,7 +45,11 @@ button {
 }
 
 .button3 {
-  /*Style me! You can test out changing the font, or font size, ...*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+  border-radius: 5px;
+  border: solid 3px #ea0b52;
+  background: #f4e0e688;
 }
 
 .button4 {
