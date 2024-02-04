@@ -30,11 +30,16 @@ button {
 /* Add your CSS styles below this line. Feel free to replace the comments with your code. Make sure not to put your code into the comments, because then nothing will happen. */
 
 .button1 {
-  /*Style me! Change my border, set a border radius or what you want to try out. :) */
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 .button2 {
   /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
+
 }
 
 .button3 {
