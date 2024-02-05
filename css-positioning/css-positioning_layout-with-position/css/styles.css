@@ -44,6 +44,10 @@ body {
   background:  #7fD9E2;
   color: #ffffff;
   height: 48px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 10;
 }
 
 /**
