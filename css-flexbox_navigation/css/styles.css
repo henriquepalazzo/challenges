@@ -39,6 +39,11 @@ ul {
   background-color: var(--grey-light);
 }
 
+.navigation__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation__link {
   background-color: var(--primary-dark);
   color: var(--white);
