@@ -15,7 +15,7 @@ const title = 'The amazing machine that brings you back to the future.';
 const text = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nunc porttitor, lobortis elit a, lacinia elit. Ut egestas elementum neque. Pellentesque finibus arcu quam, sed ullamcorper ex porta pulvinar. Quisque faucibus id arcu sed pellentesque. Duis magna augue, porta luctus dolor id, maximus mattis nisl. Sed interdum dignissim hendrerit. Quisque non sodales sem. Cras vehicula, justo vitae porta eleifend, odio arcu tempus sapien, at aliquam neque odio vel libero. Vivamus elementum viverra laoreet.';
 let likes = 828;
 const userFullName = 'Henrique Palazzo';
-const isReported = 0;
+const isReported = false;
 
 // --^-- write your code here --^--
 
