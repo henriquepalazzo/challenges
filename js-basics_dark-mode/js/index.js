@@ -8,11 +8,9 @@ const buttonToggle = document.querySelector('[data-js="toggle-button"]');
 
 buttonDarkMode.addEventListener('click', () => {
     bodyElement.classList.add('dark')
-    bodyElement.classList.remove('light')
 })
 
 buttonLightMode.addEventListener('click', () => {
-    bodyElement.classList.add('light')
     bodyElement.classList.remove('dark')
 })
 
