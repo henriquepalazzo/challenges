@@ -9,7 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const bookTitle = 'In Each Other\'s Care: A Guide to the Most Common Relationship Conflicts and How to Work Through Them'
+const author = 'Stan Tatkin'
+let rating = 4.28
+let numberSales = 8342
 // --^-- write your code here --^--
 
 /*
@@ -25,7 +28,10 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
-
+logBookData()
+numberSales += 328
+rating += 0.31
+logBookData()
 // --^-- write your code here --^--
 
 /*
@@ -37,5 +43,10 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
-
+function logBookData() {
+  console.log('Title: ' + bookTitle);
+  console.log('Author: ' + author);
+  console.log('Rating: ' + rating);
+  console.log('Sales: ' + numberSales);
+}
 // --^-- write your code here --^--
