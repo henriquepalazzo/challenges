@@ -38,5 +38,13 @@ function calculatePizzaArea(diameter) {
 // Task 2
 // define the function updatePizzaDisplay here
 
+function updatePizzaDisplay(pizzaElement, newSize) {
+  pizzaElement.style.width = newSize / 24 * 100 + 'px'
+}
+
 // Task 3
 // define the function updateOutputColor here
+
+function updateOutputColor(size1, size2) {
+  outputSection.style.backgroundColor = size1 > size2 ? 'var(--red)' : 'var(--green)'
+}
