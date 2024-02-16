@@ -19,3 +19,17 @@ function sumTwoSmallestNumbers(numbers) {
     return a + b
 }
 
+
+/*
+https://www.codewars.com/kata/5656b6906de340bd1b0000ac/solutions/javascript
+Two to One
+*/
+
+function longest(s1, s2) {
+    const arr1 = new Set(s1.split('').sort())
+    const arr2 = new Set(s2.split('').sort())
+    return Array.from(new Set([...arr1, ...arr2].sort())).join('')
+  }
+
+//
+const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
