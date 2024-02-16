@@ -33,3 +33,18 @@ function longest(s1, s2) {
 
 //
 const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+
+/*
+https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/solutions/javascript
+String ends with?
+*/
+
+function solution(str, ending){
+    return str.split('').reverse().join('').indexOf(ending.split('').reverse().join('')) === 0 ? true : false
+}
+
+//
+function solution(str, ending){
+    return str.endsWith(ending);
+}
