@@ -4,7 +4,7 @@ const form = document.querySelector('[data-js="form"]');
 const resultOutput = document.querySelector('[data-js="result"]');
 
 function add(a, b) {
-  return a + b;
+  return Number(a) + Number(b);
 }
 
 function subtract(a, b) {
@@ -23,10 +23,21 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let result;
-
-  // --v-- write your code here --v--
-
-  // --^-- write your code here --^--
-
+  const formData = new FormData(event.target)
+  const data = Object.fromEntries(formData)
+  switch(data.operator) {
+    case 'addition':
+      result = add(data.numberA, data.numberB)
+      break
+    case 'subtraction':
+      result = subtract(data.numberA, data.numberB)
+      break
+    case 'multiplication':
+      result = multiply(data.numberA, data.numberB)
+      break
+    case 'division':
+      result = divide(data.numberA, data.numberB)
+      break
+  }
   resultOutput.textContent = result;
 });
