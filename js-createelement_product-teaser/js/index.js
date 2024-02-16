@@ -9,3 +9,44 @@ const category3 = "Plankton Diet";
 const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
+
+const body = document.querySelector("body")
+const product = document.createElement("article")
+product.classList.add("product")
+product.innerHTML = `
+  <div class="product__body">
+    <div class="product__text-container">
+      <h2 class="product__name">${name}</h2>
+      <ul class="product__categories">
+        <li class="product__category">${category1}</li>
+        <li class="product__category">${category2}</li>
+        <li class="product__category">${category3}</li>
+      </ul>
+      <p class="product__description">${description}</p>
+    </div>
+    <div class="product__image-container">
+      <img
+        class="product__image"
+        src="${imageSrc}"
+        alt=""
+      />
+    </div>
+  </div>
+  <footer class="product__footer">
+    <span class="product__price">${price}</span>
+  </footer>
+`
+const buyProduct = document.createElement("button")
+buyProduct.classList.add("product__buy-button")
+buyProduct.setAttribute("data-js", "but-product-2")
+buyProduct.setAttribute("type", "button")
+buyProduct.innerHTML = "Buy"
+
+buyProduct.addEventListener("click", () => {
+  console.log(`The price for the product ${name} is ${price}`);
+})
+
+const footer = product.querySelector("footer")
+footer.append(buyProduct)
+body.append(product)
+
