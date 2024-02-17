@@ -48,3 +48,17 @@ function solution(str, ending){
 function solution(str, ending){
     return str.endsWith(ending);
 }
+
+/*
+https://www.codewars.com/kata/5264d2b162488dc400000001/solutions/javascript
+Stop gninnipS My sdroW
+*/
+
+function spinWords(string){
+    return string.split(" ").map((word) => word.length >= 5 ? word.split("").reverse().join("") : word).join(" ")
+}
+
+//
+function spinWords(string){
+    return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
+}
