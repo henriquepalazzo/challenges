@@ -62,3 +62,27 @@ function spinWords(string){
 function spinWords(string){
     return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
 }
+
+/*
+https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/javascript
+Persistent Bugger
+*/
+function persistence(num) {
+    let persistanceCount = 0
+    while (num.toString().split("").length > 1) {
+        num = num.toString().split("").reduce((accumulator, currentValue) => accumulator * currentValue)
+        persistanceCount ++
+    }  
+    return persistanceCount
+}
+
+//
+function persistence(num) {
+    var times = 0;
+    num = num.toString();
+    while (num.length > 1) {
+      times++;
+      num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+    }
+    return times;
+ }
