@@ -86,3 +86,16 @@ function persistence(num) {
     }
     return times;
  }
+
+/*
+https://www.codewars.com/kata/5208f99aee097e6552000148/solutions/javascript
+Break camelCase
+*/
+function solution(string) {
+    return string.split("").map((letter)=>/[A-Z]/.test(letter)? ' '+letter : letter).join("");
+}
+
+//
+function solution(string) {
+    return string.replace(/([A-Z])/g, ' $1');
+}
