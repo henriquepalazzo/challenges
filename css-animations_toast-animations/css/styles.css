@@ -15,19 +15,21 @@ body {
 
 .start-button {
   padding: 1rem 2rem;
-  background: #e5430f;
+  background: #475cc6;
   color: #e4e8f0;
   border-radius: 14px;
   border: none;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: box-shadow 1s, background-color 1s 0.5s;
 }
 
 .start-button:hover {
-  background-color: #f5521c;
+  background-color: #e5430f;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: box-shadow 1s, background-color 1s;
 }
 
 .start-button:disabled {
@@ -49,12 +51,11 @@ body {
   background: rgb(71, 212, 94);
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in;
 }
 
 .toast--hidden {
-  transform: translate3d(-150%, 0, 0);
+  transform: rotate(180deg) translateY(100px);
 }
 
 /* Countdown */
