@@ -6,11 +6,11 @@ let number = 0;
 let count = 0;
 
 while (number <= 0.9) {
-  number = Math.random().toFixed(2)
-  console.log(number);
+  number = Math.random()
+  console.log(number.toFixed(2));
   count ++
 }
 
 console.log(
-  `The number that ended the loop was ${number} and it took ${count} rounds to do this!`
+  `The number that ended the loop was ${number.toFixed(2)} and it took ${count} rounds to do this!`
 );
