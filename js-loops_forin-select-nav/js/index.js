@@ -20,9 +20,15 @@ const select = document.createElement("select");
 select.name = "languages";
 main.append(select);
 
-// --v-- write/change code here --v--
-
-// --^-- write/change code here --^--
+for (const language in languages) {
+  if (Object.hasOwnProperty.call(languages, language)) {
+    const element = languages[language];
+    const option = document.createElement("option")
+    option.setAttribute("value", element)
+    option.textContent = element
+    select.append(option)
+  }
+}
 
 // Part 2: Creating a Navigation Bar
 
@@ -37,6 +43,15 @@ const ul = document.createElement("ul");
 main.append(navElement);
 navElement.append(ul);
 
-// --v-- write/change code here --v--
-
-// --^-- write/change code here --^--
+for (const navItem in nav) {
+  if (Object.hasOwnProperty.call(nav, navItem)) {
+    const element = nav[navItem];
+    console.log(element.text);
+    const liItem = document.createElement("li")
+    const aItem = document.createElement("a")
+    aItem.setAttribute("href", element.href)
+    aItem.textContent = element.text
+    liItem.append(aItem)
+    ul.append(liItem)
+  }
+}
