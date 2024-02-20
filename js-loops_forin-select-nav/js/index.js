@@ -43,6 +43,15 @@ const ul = document.createElement("ul");
 main.append(navElement);
 navElement.append(ul);
 
-// --v-- write/change code here --v--
-
-// --^-- write/change code here --^--
+for (const navItem in nav) {
+  if (Object.hasOwnProperty.call(nav, navItem)) {
+    const element = nav[navItem];
+    console.log(element.text);
+    const liItem = document.createElement("li")
+    const aItem = document.createElement("a")
+    aItem.setAttribute("href", element.href)
+    aItem.textContent = element.text
+    liItem.append(aItem)
+    ul.append(liItem)
+  }
+}
