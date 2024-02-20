@@ -13,6 +13,9 @@ function renderStars(filledStars = 0) {
     } else {
       star.setAttribute("src", "../assets/star-empty.svg")
     }
+    star.addEventListener("click", () => {
+      renderStars(index)
+    })
     starContainer.append(star)
   }
 }
