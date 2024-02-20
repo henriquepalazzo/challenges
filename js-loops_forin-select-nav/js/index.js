@@ -20,9 +20,15 @@ const select = document.createElement("select");
 select.name = "languages";
 main.append(select);
 
-// --v-- write/change code here --v--
-
-// --^-- write/change code here --^--
+for (const language in languages) {
+  if (Object.hasOwnProperty.call(languages, language)) {
+    const element = languages[language];
+    const option = document.createElement("option")
+    option.setAttribute("value", element)
+    option.textContent = element
+    select.append(option)
+  }
+}
 
 // Part 2: Creating a Navigation Bar
 
