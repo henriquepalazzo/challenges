@@ -18,7 +18,7 @@ const programmingLanguages = [
 ];
 
 for (const language of programmingLanguages) {
-  const liItem = document.createElement("li")
-  liItem.textContent = language
-  ol.append(liItem)
+  const listItemElement = document.createElement("li")
+  listItemElement.textContent = language
+  ol.append(listItemElement)
 }
