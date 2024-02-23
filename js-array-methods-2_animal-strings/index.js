@@ -27,9 +27,11 @@ const hippoExists = animalStrings.some((animal) => "hippo");
 const catStartingFromIndexFiveExists = animalStrings.indexOf("cat", 5);
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterP = null;
+const firstAnimalStartingWithLetterP = animalStrings.find((animal) =>
+  animal.startsWith("p")
+);
 
-const indexOfGiraffe = null;
+const indexOfGiraffe = animalStrings.indexOf("giraffe");
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
