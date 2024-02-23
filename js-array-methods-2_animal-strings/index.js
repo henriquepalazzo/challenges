@@ -44,7 +44,9 @@ const indexOfGiraffe = animalStrings.indexOf("giraffe");
 const animalsSortedAlphabetically = animalStrings.slice().sort();
 
 // Hint: Guess what? There is a string method called `endsWith()`.
-const anyAnimalEndsWithLetterZ = null;
+const anyAnimalEndsWithLetterZ = animalStrings.filter((animal) =>
+  animal.endsWith("z")
+);
 
 const everyAnimalHasMoreThanTwoLetters = null;
 
