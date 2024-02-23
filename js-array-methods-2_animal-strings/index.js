@@ -21,7 +21,7 @@ const animalStrings = [
   "rhino",
 ];
 
-const hippoExists = null;
+const hippoExists = animalStrings.some((animal) => "hippo");
 
 // Hint: You can pass the starting index as second parameter.
 const catStartingFromIndexFiveExists = null;
