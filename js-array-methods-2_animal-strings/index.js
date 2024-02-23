@@ -41,7 +41,7 @@ const indexOfGiraffe = animalStrings.indexOf("giraffe");
 // Hint: There is no need to upper-/lowercase the strings before sorting them.
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy.
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animalStrings.slice().sort();
 
 // Hint: Guess what? There is a string method called `endsWith()`.
 const anyAnimalEndsWithLetterZ = null;
