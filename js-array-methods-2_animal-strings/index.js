@@ -24,7 +24,7 @@ const animalStrings = [
 const hippoExists = animalStrings.some((animal) => "hippo");
 
 // Hint: You can pass the starting index as second parameter.
-const catStartingFromIndexFiveExists = null;
+const catStartingFromIndexFiveExists = animalStrings.indexOf("cat", 5);
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
 const firstAnimalStartingWithLetterP = null;
