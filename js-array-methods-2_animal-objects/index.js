@@ -82,7 +82,9 @@ const firstAnimalStartingWithLetterG = animals.find((animal) =>
   animal.name.startsWith("z")
 );
 
-const indexOfAnimalWithNameLongerFive = null;
+const indexOfAnimalWithNameLongerFive = animals.findIndex(
+  (animal) => animal.name.length > 5
+);
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
