@@ -99,7 +99,9 @@ const animalsSortedAlphabetically = animals
   .slice()
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const animalsSortedByWeightStartingWithLowest = null;
+const animalsSortedByWeightStartingWithLowest = animals
+  .slice()
+  .sort((a, b) => a.weight - b.weight);
 
 const animalsSortedByWeightReversed = null;
 
