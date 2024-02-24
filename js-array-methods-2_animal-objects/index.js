@@ -97,7 +97,7 @@ const indexOfAnimalWithNameLongerFive = animals.findIndex(
 
 const animalsSortedAlphabetically = animals
   .slice()
-  .sort((animal) => animal.nama);
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const animalsSortedByWeightStartingWithLowest = null;
 
