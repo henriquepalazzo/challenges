@@ -95,7 +95,9 @@ const indexOfAnimalWithNameLongerFive = animals.findIndex(
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animals
+  .slice()
+  .sort((animal) => animal.nama);
 
 const animalsSortedByWeightStartingWithLowest = null;
 
