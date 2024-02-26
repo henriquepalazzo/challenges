@@ -7,10 +7,10 @@ const queryInput = document.querySelector('[data-js="query-input"]');
 queryInput.addEventListener("input", (event) => {
   container.innerHTML = "";
 
-  const searchString = event.target.value;
+  const searchString = event.target.value.toLowerCase();
 
   const foundCountries = countries.filter((country) =>
-    country.name.startsWith(searchString)
+    country.name.toLowerCase().startsWith(searchString)
   );
 
   if (foundCountries) {
