@@ -114,7 +114,7 @@ const animalWithWeightMoreThanFivehundredExists = animals.some(
 // Hint: Filter for Europe first, then check every animal for its weight.
 const allAnimalsInEuropeWeighLessThanOnehundred = animals
   .filter((animal) => animal.continents.includes("Europe"))
-  .filter((animal) => animal.weight < 100);
+  .every((animal) => animal.weight < 100);
 
 // Hint: filter + map + reduce
 const weightOfAllAnimalsInAfrica = animals
