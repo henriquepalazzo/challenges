@@ -45,9 +45,8 @@ const animalsSortedAlphabetically = animalStrings.slice().sort();
 
 // Hint: Guess what? There is a string method called `endsWith()`.
 const anyAnimalEndsWithLetterZ = animalStrings.filter((animal) =>
-  animal.endsWith("a")
+  animal.endsWith("z")
 );
-console.log(anyAnimalEndsWithLetterZ);
 
 const everyAnimalHasMoreThanTwoLetters = animalStrings.filter(
   (animal) => animal.length > 2
