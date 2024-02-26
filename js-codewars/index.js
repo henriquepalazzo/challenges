@@ -128,3 +128,86 @@ function solution(string) {
   return string.replace(/([A-Z])/g, " $1");
 }
 
+/*
+https://www.codewars.com/kata/51ba717bb08c1cd60f00002f
+Range Extraction
+*/
+function solution(list) {
+  let finalString = "";
+  let subSeq = [];
+  list.map((element, index) => {
+    if (
+      Math.abs(element - list[index - 1]) > 1 &&
+      Math.abs(element - list[index + 1]) > 1 // || index === 0
+    ) {
+      parseSubSeq(index);
+      if (finalString.charAt(finalString.length - 1) !== "," && index > 0)
+        finalString += ",";
+      finalString += element + ",";
+    } else {
+      subSeq.push(element);
+      if (Math.abs(element - list[index + 1]) > 1) {
+        // finalString += ",";
+        parseSubSeq(index);
+      }
+    }
+    if (index == list.length - 1 && subSeq.length) {
+      parseSubSeq(index);
+    }
+  });
+  function parseSubSeq(index) {
+    let subLength = subSeq.length;
+    if (subLength > 2) {
+      if (
+        finalString.charAt(finalString.length - 1) !== "," &&
+        index > 0 &&
+        finalString.length
+      )
+        finalString += ",";
+      finalString += `${subSeq.shift()}-${subSeq.pop()},`;
+    } else {
+      finalString += subSeq.join(",");
+      if (finalString.charAt(finalString.length - 1) !== ",")
+        finalString += ",";
+    }
+    if (index === list.length - 1 && subLength >= 2) {
+      finalString = finalString.substring(0, finalString.length - 1);
+    }
+    subSeq = [];
+  }
+  if (finalString.charAt(finalString.length - 1) === ",")
+    finalString = finalString.substring(0, finalString.length - 1);
+  return finalString;
+}
+
+const test = solution([
+  -51, -48, -47, -45, -43, -40, -37, -34, -33, -30, -29, -28,
+]);
+console.log(test);
+
+//
+function solution(individualIntegers) {
+  return individualIntegers
+    .reduce(splitIntoRanges, [])
+    .map(convertToRange)
+    .join(",");
+}
+
+function splitIntoRanges(ranges, number) {
+  if (!ranges.length) {
+    ranges.push([number]);
+    return ranges;
+  }
+
+  var lastRange = ranges[ranges.length - 1];
+  var lastNumber = lastRange[lastRange.length - 1];
+
+  number === lastNumber + 1 ? lastRange.push(number) : ranges.push([number]);
+  return ranges;
+}
+
+function convertToRange(range) {
+  return range.length < 3
+    ? range.join(",")
+    : range[0] + "-" + range[range.length - 1];
+}
