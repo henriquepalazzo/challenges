@@ -211,3 +211,20 @@ function convertToRange(range) {
     ? range.join(",")
     : range[0] + "-" + range[range.length - 1];
 }
+
+/*
+Find the unique number
+https://www.codewars.com/kata/585d7d5adb20cf33cb000235/solutions/javascript
+*/
+function findUniq(arr) {
+  let unique = {};
+  arr.map((num) => (unique[num] = !unique[num] ? 1 : unique[num] + 1));
+  return Number(Object.keys(unique).find((key) => unique[key] === 1));
+}
+
+//
+function findUniq(arr) {
+  return arr.find((n) => {
+    return arr.indexOf(n) === arr.lastIndexOf(n);
+  });
+}
