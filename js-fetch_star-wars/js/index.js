@@ -40,10 +40,14 @@ renderElement(firstCard);
 fetchDataAndRender();
 
 async function fetchDataAndRender() {
-  const response = await fetch("https://swapi.dev/api/people");
-  const data = await response.json();
-  data.results.forEach((cardContent) => {
-    const card = Card(cardContent);
-    renderElement(card);
-  });
+  try {
+    const response = await fetch("https://swapi.dev/api/people");
+    const data = await response.json();
+    data.results.forEach((cardContent) => {
+      const card = Card(cardContent);
+      renderElement(card);
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
