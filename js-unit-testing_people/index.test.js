@@ -82,7 +82,10 @@ test("getPeopleByAge() returns an array of people of a certain age", () => {
   ]);
 });
 
-test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {});
+test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
+  const result = getPeopleNamesOlderThan(people, 35);
+  expect(result).toEqual(["Erika Musterfrau"]);
+});
 
 test("getPeopleByLastName() returns an array of people of a certain lastName", () => {});
 
