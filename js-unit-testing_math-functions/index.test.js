@@ -1,4 +1,4 @@
-import { add, multiply, subtract } from "./index.js";
+import { add, multiply, subtract, divide } from "./index.js";
 
 test("returns 5 if called with add(2, 3)", () => {
   const result = add(2, 3);
@@ -37,4 +37,12 @@ test("returns a negative value if only the second argument is negative", () => {
 test("returns a positive value if called with two negative arguments", () => {
   const result = multiply(-2, -2);
   expect(result).toBeGreaterThan(0);
+});
+test("returns 3 if called with divide(9, 3)", () => {
+  const result = divide(9, 3);
+  expect(result).toBe(3);
+});
+test('returns "You should not do this!" if called with 0 as second argument', () => {
+  const result = divide(9, 0);
+  expect(result).toBe("You should not do this!");
 });
