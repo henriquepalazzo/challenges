@@ -116,6 +116,9 @@ test("isAnyoneOlderThan() returns true if any person is older than the given age
   expect(result).toEqual(true);
 });
 
-test("isAnyoneOlderThan() returns false if no person is older than the given age", () => {});
+test("isAnyoneOlderThan() returns false if no person is older than the given age", () => {
+  const result = isAnyoneOlderThan(people, 60);
+  expect(result).toEqual(false);
+});
 
 test("getFullNamesSortedByAge() returns an array of full names sorted by age", () => {});
