@@ -59,7 +59,16 @@ test('getFullNames() returns an array with full names as strings, e.g. "Jane Doe
   ]);
 });
 
-test('getNameAndAge() returns an array of formatted strings like this: "Skywalker (23)"', () => {});
+test('getNameAndAge() returns an array of formatted strings like this: "Skywalker (23)"', () => {
+  const result = getNameAndAge(people);
+  expect(result).toEqual([
+    "Jane (21)",
+    "John (18)",
+    "Max (32)",
+    "Erika (38)",
+    "Luke (23)",
+  ]);
+});
 
 test("getPeopleByAge() returns an array of people of a certain age", () => {});
 
