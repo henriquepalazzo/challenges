@@ -10,7 +10,9 @@ export function getNameAndAge(people) {
   return people.map((person) => `${person.firstName} (${person.age})`);
 }
 
-export function getPeopleByAge(people, age) {}
+export function getPeopleByAge(people, age) {
+  return people.filter((person) => person.age === age);
+}
 
 export function getPeopleNamesOlderThan(people, age) {}
 
