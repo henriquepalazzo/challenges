@@ -1,5 +1,5 @@
 import "./App.css";
-
+import Article from "./Article";
 export default function App() {
-  return <div>Replace me with an article</div>;
+  return <Article />;
 }
