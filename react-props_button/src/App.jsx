@@ -1,18 +1,23 @@
 import "./App.css";
 
 export default function App() {
+  function handleClick() {
+    alert("Noooo! You did it...");
+  }
   return (
     <>
-      <Button color="#ffcc00" text="Click here NOW!" />
-      <Button color="#ff0000" text="Don't click me!" disabled />
+      <Button color="#ffcc00" text="Click here NOW!" onClick={handleClick} />
+      <Button
+        color="#ff0000"
+        text="Don't click me!"
+        onClick={handleClick}
+        disabled
+      />
     </>
   );
 }
 
-function Button({ color, disabled, text }) {
-  function handleClick() {
-    alert("Noooo! You did it...");
-  }
+function Button({ color, disabled, text, onClick }) {
   return (
     <button
       style={{
@@ -23,7 +28,7 @@ function Button({ color, disabled, text }) {
         fontSize: 20,
       }}
       disabled={disabled}
-      onClick={handleClick}
+      onClick={onClick}
     >
       {text}
     </button>
