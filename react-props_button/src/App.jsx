@@ -20,6 +20,7 @@ function Button({ color, disabled, text }) {
         fontSize: 20,
       }}
       disabled={disabled}
+      onClick={() => alert("Noooo! You did it...")}
     >
       {text}
     </button>
