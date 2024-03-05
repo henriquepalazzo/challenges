@@ -2,24 +2,20 @@ import "./App.css";
 import Header from "./components/Header";
 import avatar from "./assets/avatar.jpg";
 import logo from "./assets/logo.jpg";
+import Link from "./components/Link";
 
 export default function App() {
   return (
     <>
       <Header>
-        <a href="#">
+        <Link href="#">
           <img className="round-image" src={logo} alt="logo" />
-        </a>
+        </Link>
         <nav>
-          <a className="navigation__link" href="#home">
-            Home
-          </a>
-          <a className="navigation__link" href="#about">
-            About
-          </a>
-          <a className="navigation__link" href="#impressum">
-            Impressum
-          </a>
+          <Link href="#home">Home</Link>
+          <Link href="#about">About</Link>
+          <Link href="#impressum">Impressum</Link>
+        </Navigation>
         </nav>
         <button
           type="button"
