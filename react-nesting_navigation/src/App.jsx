@@ -4,13 +4,14 @@ import Navigation from "./components/Navigation";
 import avatar from "./assets/avatar.jpg";
 import logo from "./assets/logo.jpg";
 import Link from "./components/Link";
+import Image from "./components/Image";
 
 export default function App() {
   return (
     <>
       <Header>
         <Link href="#">
-          <img className="round-image" src={logo} alt="logo" />
+          <Image src={logo} alt="logo" />
         </Link>
         <Navigation>
           <Link href="#home">Home</Link>
@@ -22,7 +23,7 @@ export default function App() {
           onClick={() => console.log("I could toggle a profile!")}
           aria-label="toggle profile"
         >
-          <img className="round-image" src={avatar} alt="avatar" />
+          <Image src={avatar} alt="avatar" />
         </button>
       </Header>
       <main>content goes here…</main>
