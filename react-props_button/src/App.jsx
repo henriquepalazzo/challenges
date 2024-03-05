@@ -10,6 +10,9 @@ export default function App() {
 }
 
 function Button({ color, disabled, text }) {
+  function handleClick() {
+    alert("Noooo! You did it...");
+  }
   return (
     <button
       style={{
@@ -20,7 +23,7 @@ function Button({ color, disabled, text }) {
         fontSize: 20,
       }}
       disabled={disabled}
-      onClick={() => alert("Noooo! You did it...")}
+      onClick={handleClick}
     >
       {text}
     </button>
