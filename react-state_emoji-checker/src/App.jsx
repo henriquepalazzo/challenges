@@ -6,7 +6,7 @@ export default function App() {
   const validCode = "🐡🐡🐠🐋🐋";
 
   function handleClick(emoji) {
-    setCode(code + emoji);
+    setCode((prev) => prev + emoji);
   }
   return (
     <div className="container">
