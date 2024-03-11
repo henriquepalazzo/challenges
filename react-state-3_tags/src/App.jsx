@@ -9,11 +9,14 @@ export default function App() {
   function onAddTag(tag) {
     setTags([...tags, tag]);
   }
+  function onDeleteTag(id) {
+    setTags(tags.filter((tag) => tag !== id));
+  }
 
   return (
     <main className="app">
       <Form onAddTag={onAddTag} />
-      <List tags={tags} />
+      <List tags={tags} onDeleteTag={onDeleteTag} />
     </main>
   );
 }
