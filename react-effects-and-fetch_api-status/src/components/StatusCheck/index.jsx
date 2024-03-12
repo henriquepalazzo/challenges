@@ -7,19 +7,18 @@ export default function StatusCheck() {
   const [statusIcon, setStatusIcon] = useState("");
 
   async function handleCheckApiStatus() {
+    const status = document.querySelector(".status-check__icon");
+    status.innerHTML = "⏳";
     const response = await fetch(apiStatusUrl);
     const data = await response.json();
-    setStatusIcon(data.status);
-    console.log(data.status);
+    setStatusIcon(data.status === "Ok" ? "✅" : "❌");
   }
 
   return (
     <article className="status-check">
       <div className="status-check__wrapper">
         <h2 className="status-check__heading">Status:</h2>
-        <span className="status-check__icon">
-          {statusIcon === "Ok" ? "✅" : "❌"}
-        </span>
+        <span className="status-check__icon">{statusIcon}</span>
       </div>
       <button
         type="button"
