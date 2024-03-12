@@ -9,9 +9,11 @@ export default function StatusCheck() {
   async function handleCheckApiStatus() {
     setStatusIcon("⏳");
     try {
-    const response = await fetch(apiStatusUrl);
-    const data = await response.json();
-    setStatusIcon(data.status === "Ok" ? "✅" : "❌");
+      const response = await fetch(apiStatusUrl);
+      setStatusIcon(response.ok ? "✅" : "❌");
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
