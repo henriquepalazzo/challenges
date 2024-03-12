@@ -6,7 +6,7 @@ import "./App.css";
 
 export default function App() {
   const [rolls, setRolls] = useLocalStorageState("rolls", { defaultValue: [] });
-  console.log(rolls);
+
   const handleRoll = () => {
     setRolls([{ value: getD6Roll(), time: Date.now() }, ...rolls]);
   };
