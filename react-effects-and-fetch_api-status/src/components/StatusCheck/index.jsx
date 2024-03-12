@@ -7,8 +7,8 @@ export default function StatusCheck() {
   const [statusIcon, setStatusIcon] = useState("");
 
   async function handleCheckApiStatus() {
-    const status = document.querySelector(".status-check__icon");
-    status.innerHTML = "⏳";
+    setStatusIcon("⏳");
+    try {
     const response = await fetch(apiStatusUrl);
     const data = await response.json();
     setStatusIcon(data.status === "Ok" ? "✅" : "❌");
