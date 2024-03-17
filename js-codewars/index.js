@@ -228,3 +228,15 @@ function findUniq(arr) {
     return arr.indexOf(n) === arr.lastIndexOf(n);
   });
 }
+
+/*
+Running out of space
+https://www.codewars.com/kata/56576f82ab83ee8268000059/solutions/javascript
+*/
+function spacey(array) {
+  let cur = "";
+  return array.map((item) => (cur += item));
+}
+
+//
+spacey = (array, string = "") => array.map((item) => (string += item));
