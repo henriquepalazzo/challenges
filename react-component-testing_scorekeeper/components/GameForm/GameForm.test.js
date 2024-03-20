@@ -17,7 +17,14 @@ test("renders two input fields and a button", () => {
   expect(button).toBeInTheDocument();
 });
 
-test("renders a form with the accessible name 'Create a new game'", () => {});
+test("renders a form with the accessible name 'Create a new game'", () => {
+  render(<GameForm></GameForm>);
+  const name = screen.getByRole("heading", {
+    level: 2,
+    name: /Create a new game/i,
+  });
+  expect(name).toBeInTheDocument();
+});
 
 test("submits the correct form data when every field is filled out", async () => {});
 
