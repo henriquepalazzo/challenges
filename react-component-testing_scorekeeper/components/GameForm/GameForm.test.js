@@ -49,4 +49,18 @@ test("submits the correct form data when every field is filled out", async () =>
   });
 });
 
-test("does not submit form if one input field is left empty", async () => {});
+test("does not submit form if one input field is left empty", async () => {
+  const mockCreateGame = jest.fn();
+  render(<GameForm onCreateGame={mockCreateGame}></GameForm>);
+  const user = userEvent.setup();
+
+  const inputGameName = screen.getByLabelText(/Name of game/i);
+  const inputPlayersName = screen.getByLabelText(
+    /Player names, separated by comma/i
+  );
+  const button = screen.getByRole("button", { name: /Create game/i });
+  await user.click(button);
+  await waitFor(() => {
+    expect(mockCreateGame).not.toHaveBeenCalled();
+  });
+});
