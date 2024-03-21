@@ -24,10 +24,23 @@ export default function App({ Component, pageProps }) {
     );
   }
 
+  function handleLights(status) {
+    setLIghts(
+      lights.map((light) => {
+        return { ...light, isOn: status === "on" ? true : false };
+      })
+    );
+  }
+
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} lights={lights} toggleLight={handleToggle} />
+      <Component
+        {...pageProps}
+        lights={lights}
+        handleLights={handleLights}
+        toggleLight={handleToggle}
+      />
     </Layout>
   );
 }
