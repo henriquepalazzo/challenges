@@ -16,6 +16,8 @@ const initialLights = [
 export default function App({ Component, pageProps }) {
   const [lights, setLIghts] = useState(initialLights);
 
+  const totalLigthsOn = lights.filter((light) => light.isOn).length;
+
   function handleToggle(id) {
     setLIghts(
       lights.map((light) =>
@@ -33,13 +35,14 @@ export default function App({ Component, pageProps }) {
   }
 
   return (
-    <Layout>
+    <Layout isDimmed={!totalLigthsOn}>
       <GlobalStyle />
       <Component
         {...pageProps}
         lights={lights}
         handleLights={handleLights}
         toggleLight={handleToggle}
+        totalLigthsOn={totalLigthsOn}
       />
     </Layout>
   );
