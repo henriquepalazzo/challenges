@@ -19,7 +19,7 @@ export default function CarRace() {
     const coveredDistance = getRandomDistance();
     updateCars((draft) => {
       const car = draft.find((car) => car.emoji === clickedCar.emoji);
-      car.position.x = car.position.x + coveredDistance;
+      car.position.x += coveredDistance;
       car.position.lastDistance = coveredDistance;
     });
   }
