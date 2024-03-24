@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import useSWR from "swr";
@@ -14,7 +15,8 @@ const fetcher = async (url) => {
 };
 
 export default function Character() {
-  const id = 1;
+  const router = useRouter();
+  const { id } = router.query;
   const { data, error, isLoading } = useSWR(
     `https://swapi.dev/api/people/${id}`,
     fetcher
